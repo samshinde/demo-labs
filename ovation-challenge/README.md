@@ -55,8 +55,20 @@ api_endpoint = "https://3wavt64nc7.execute-api.ap-south-1.amazonaws.com/v1/delet
 
 # Logging and Monitoring
 
+## Loggroups create for api gateway and lambda function logging
+![alt text](images/image0.png)
+
 ## Created simple dashboard for monitoring api sum count, 4xx and 5xx errors
 ![alt text](images/image1.png)
+
+## Alarm integration for create and delete APIS
+![alt text](images/image2.png)
+
+## Realtime metric data
+![alt text](images/image3.png)
+
+## SNS configured and integrated with cloudwatch alarms
+![alt text](image.png)
 
 # TODO : 
 1. We can store the terraform state to the s3 buckets

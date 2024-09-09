@@ -58,7 +58,7 @@ resource "aws_lambda_permission" "create_ovation_rest_api_permission" {
   action = "lambda:InvokeFunction"
   function_name = aws_lambda_function.create_lambda.function_name
   principal = "apigateway.amazonaws.com"
-  source_arn = "${aws_api_gateway_rest_api.ovation_rest_api.execution_arn}/*/GET/create"
+  source_arn = "${aws_api_gateway_rest_api.ovation_rest_api.execution_arn}/*/POST/create"
   depends_on = [
     aws_api_gateway_integration.create_lambda_integration
   ]

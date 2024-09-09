@@ -17,6 +17,8 @@ resource "aws_cloudwatch_metric_alarm" "fourRate" {
   threshold                 = var.fourRate_threshold
   insufficient_data_actions = []
 
+  alarm_actions = [aws_sns_topic.topic.arn]
+  ok_actions    = [aws_sns_topic.topic.arn]
   treat_missing_data = "notBreaching"
 
   metric_query {
@@ -88,6 +90,8 @@ resource "aws_cloudwatch_metric_alarm" "fiveRate" {
   threshold                 = var.fiveRate_threshold
   insufficient_data_actions = []
 
+  alarm_actions = [aws_sns_topic.topic.arn]
+  ok_actions    = [aws_sns_topic.topic.arn]
   treat_missing_data = "notBreaching"
 
   metric_query {
