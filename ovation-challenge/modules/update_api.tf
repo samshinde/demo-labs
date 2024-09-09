@@ -7,7 +7,7 @@ resource "aws_api_gateway_resource" "update_ovation_rest_api_root" {
 resource "aws_api_gateway_method" "update_method" {
   rest_api_id = aws_api_gateway_rest_api.ovation_rest_api.id
   resource_id = aws_api_gateway_resource.update_ovation_rest_api_root.id
-  http_method = "GET"
+  http_method = "PUT"
   authorization = "NONE"
 }
 

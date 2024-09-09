@@ -29,7 +29,7 @@ resource "aws_api_gateway_integration" "read_lambda_integration" {
   rest_api_id = aws_api_gateway_rest_api.ovation_rest_api.id
   resource_id = aws_api_gateway_resource.read_ovation_rest_api_root.id
   http_method = aws_api_gateway_method.read_method.http_method
-  integration_http_method = "POST"
+  integration_http_method = "GET"
   type = "AWS"
   uri = aws_lambda_function.read_lambda.invoke_arn
 }

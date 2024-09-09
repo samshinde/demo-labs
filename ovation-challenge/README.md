@@ -27,5 +27,36 @@ cd scripts
 ./provision.sh destroy
 ```
 
+# Access API's
+
+## once we finish the apply command we can see the endpoint to access the apis
+```
+Apply complete! Resources: 58 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+api_endpoint = "https://3wavt64nc7.execute-api.ap-south-1.amazonaws.com/"
+```
+
+## to access the all apis we need to apend the specific routes to above endpoint
+```
+1. Create API endpoint
+api_endpoint = "https://3wavt64nc7.execute-api.ap-south-1.amazonaws.com/v1/create"
+
+2. Read API endpoint
+api_endpoint = "https://3wavt64nc7.execute-api.ap-south-1.amazonaws.com/v1/read"
+
+3. Update API endpoint
+api_endpoint = "https://3wavt64nc7.execute-api.ap-south-1.amazonaws.com/v1/update"
+
+4. Delete API endpoint
+api_endpoint = "https://3wavt64nc7.execute-api.ap-south-1.amazonaws.com/v1/delete"
+```
+
+# Logging and Monitoring
+
+## Created simple dashboard for monitoring api sum count, 4xx and 5xx errors
+![alt text](images/image1.png)
+
 # TODO : 
 1. We can store the terraform state to the s3 buckets

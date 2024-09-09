@@ -55,6 +55,7 @@ case "$1" in
     ;;
   apply)
     cd ../modules
+    terraform init
     terraform plan -out=plan -refresh=false
     terraform apply -auto-approve plan
     ;;

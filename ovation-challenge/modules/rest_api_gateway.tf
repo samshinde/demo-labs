@@ -5,7 +5,7 @@ resource "aws_cloudwatch_log_group" "api_gw_rest" {
 }
 
 resource "aws_api_gateway_rest_api" "ovation_rest_api" {
-  name = "ovation-rest-api"
+  name = var.api_name
   description = "ovation_rest_api"
   endpoint_configuration {
     types = ["EDGE"]
@@ -32,7 +32,7 @@ resource "aws_api_gateway_deployment" "ovation_rest_api_deployment" {
 resource "aws_api_gateway_stage" "ovation_rest_api_deployment_stage" {
   deployment_id = aws_api_gateway_deployment.ovation_rest_api_deployment.id
   rest_api_id   = aws_api_gateway_rest_api.ovation_rest_api.id
-  stage_name    = "v1"
+  stage_name    = var.api_stage
 
   access_log_settings {
     destination_arn = aws_cloudwatch_log_group.api_gw_rest.arn

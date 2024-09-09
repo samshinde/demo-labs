@@ -76,5 +76,59 @@ variable "quota_period" {
   default = "DAY"
 }
 
+variable "email_address" {
+  description = "email_address"
+  type = string
+  default = "samshinde23290@gmail.com"
+}
 
+# -----------------------------------------------------------------------------
+# Variables: API Gateway
+# -----------------------------------------------------------------------------
 
+variable "api_name" {
+  description = "API Gateway Name"
+  type        = string
+  default     = "ovation-rest-api"
+}
+
+variable "api_stage" {
+  description = "API Gateway stage"
+  type        = string
+  default     = "v1"
+}
+
+variable "resources" {
+  description = "Methods that have Cloudwatch alarms enabled"
+  type        = map
+  default     = {
+    "/create" = "POST",
+    "/read"   = "GET",
+    "/update" = "PUT",
+    "/delete" = "DELETE",
+  }
+}
+
+variable "fourRate_threshold" {
+  description = "Percentage of errors that will trigger an alert"
+  default     = 0.02
+  type        = number
+}
+
+variable "fourRate_evaluationPeriods" {
+  description = "How many periods are evaluated before the alarm is triggered"
+  default     = 5
+  type        = number
+}
+
+variable "fiveRate_threshold" {
+  description = "Percentage of errors that will trigger an alert"
+  default     = 0.02
+  type        = number
+}
+
+variable "fiveRate_evaluationPeriods" {
+  description = "How many periods are evaluated before the alarm is triggered"
+  default     = 5
+  type        = number
+}
