@@ -1,2 +1,0 @@
-# testrepo
-Sample git repo
