@@ -72,6 +72,3 @@ api_endpoint = "https://3wavt64nc7.execute-api.ap-south-1.amazonaws.com/v1/delet
 
 # TODO : 
 1. We can store the terraform state to the s3 buckets
-
-Reference:
-https://github.com/skyscrapers/terraform-cloudwatch/blob/master/api_gateway/main.tf
